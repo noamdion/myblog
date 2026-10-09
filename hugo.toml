@@ -1,0 +1,61 @@
+baseURL = "/"
+locale = "en-us"
+title = "Ping Lin"
+theme = "PaperMod"
+
+[params]
+  author = "Ping Lin"
+  description = "My life, thoughts, and English learning journey"
+  ShowSearchPage = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowToc = true
+  TocOpen = false
+  defaultTheme = "light"
+
+  [params.profileMode]
+    enabled = true
+    title = "Ping Lin"
+    subtitle = "My life, thoughts, and English learning journey"
+    imageUrl = "/images/avatar.jpg"
+    imageWidth = 120
+    imageHeight = 120
+    imageTitle = "avatar"
+
+  [[params.socialIcons]]
+    name = "mail"
+    url = "mailto:pingl@mcmaster.ca"
+
+  [params.footer]
+    text = "© 2026 Ping Lin"
+
+[[menu.main]]
+  name = "Search"
+  url = "search/"
+  weight = 5
+
+[[menu.main]]
+  name = "Posts"
+  url = "posts/"
+  weight = 10
+  
+[[menu.main]]
+  name = "Tags"
+  url = "tags/"
+  weight = 15
+
+[[menu.main]]
+  name = "Archives"
+  url = "archives/"
+  weight = 20
+
+[[menu.main]]
+  name = "About"
+  url = "about/"
+  weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
