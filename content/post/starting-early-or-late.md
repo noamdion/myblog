@@ -87,3 +87,8 @@ That is why my definition of success may be different from other people's.
 Whether we start early or start later, we should build a foundation, develop good habits, keep exploring, and never give up on becoming better.
 
 We may not know exactly where our path will lead us, but we can keep moving forward with patience, courage, and faith.
+
+
+---
+
+*AI Use: I used AI to help with grammar and structure. All ideas and opinions are my own. See my [AI Use Statement](/myblog/about/ai-use/).*

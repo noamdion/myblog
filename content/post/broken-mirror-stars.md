@@ -79,3 +79,9 @@ But we can keep learning from one another.
 We can be humble about what we don't know and proud of what we can contribute.
 
 Perhaps that is enough: not to understand the whole world, but to keep trying to understand it better, one piece at a time.
+
+
+
+---
+
+*AI Use: I used AI to help with grammar and structure. All ideas and opinions are my own. See my [AI Use Statement](/myblog/about/ai-use/).*

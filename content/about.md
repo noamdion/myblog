@@ -2,7 +2,9 @@
 title: "About Me"
 date: 2026-10-09
 draft: false
+image: "/myblog/images/about_me.jpg"
 ---
+
 
 Hi, I'm Ping. Welcome to my blog!
 
@@ -21,3 +23,9 @@ Through this blog, I hope to share what I learn, express my honest thoughts, and
 My English may not always be perfect, but I will keep writing. After all, learning is a journey, not a competition.
 
 Thanks for visiting my blog. I hope you find something here that makes you think, too.
+
+
+
+---
+
+*AI Use: I used AI to help with grammar and structure. All ideas and opinions are my own. See my [AI Use Statement](/myblog/about/ai-use/).*
