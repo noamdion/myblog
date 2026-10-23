@@ -1,5 +1,4 @@
-baseURL = "https://noamdion.github.io/myblog/"
-languageCode = "en-us"
+﻿baseURL = "https://noamdion.github.io/myblog/"
 title = "Ping Lin"
 theme = "stack"
 

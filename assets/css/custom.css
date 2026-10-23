@@ -134,3 +134,24 @@
   font-size: 18px;
   line-height: 1.8;
 }
+
+
+/* Search results */
+.search-result--list {
+    line-height: 1.5;
+}
+
+.search-result--list a {
+    background: transparent;
+    color: var(--body-text-color);
+    padding-block: 4px;
+}
+
+/* Highlight matched keywords only */
+.search-result--list mark,
+.search-result--list .highlight {
+    background: #fff0b3;
+    color: #493800;
+    padding: 0 2px;
+    border-radius: 2px;
+}
