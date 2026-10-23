@@ -1,33 +1,64 @@
-/* ========== 文章列表卡片封面图 ========== */
-/* 文章列表卡片封面图 */
-.article-list article .article-image {
-  height: auto !important;
-  aspect-ratio: auto !important;
-  padding: 0 !important;
-  overflow: visible !important;
+﻿/* 1. Home: image on the left, text on the right */
+.article-list article .article-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 24px;
 }
 
-.article-list article .article-image img {
+.article-list article .article-header .article-image {
+  flex: 0 0 35% !important;
+  width: 35% !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.article-list article .article-header .article-image a {
+  display: block !important;
+  height: auto !important;
+}
+
+.article-list article .article-header .article-image img {
   display: block !important;
   width: 100% !important;
-  max-width: 100% !important;
   height: auto !important;
-  aspect-ratio: auto !important;
+  max-height: none !important;
   object-fit: contain !important;
 }
 
-/* ========== 右侧目录（TOC） ========== */
+.article-list article .article-header .article-details {
+  flex: 1 1 0 !important;
+  min-width: 0;
+}
+
+/* Home on mobile: image above text */
+@media (max-width: 600px) {
+  .article-list article .article-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px;
+  }
+
+  .article-list article .article-header .article-image {
+    flex: none !important;
+    width: 100% !important;
+  }
+}
+
+/* 2. Table of contents */
 .widget--toc {
   max-width: 240px;
   margin-left: auto;
 }
 
 #TableOfContents {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   line-height: 1.6;
 }
 
-/* ========== 文章卡片圆角、阴影 ========== */
+/* 3. Article cards */
 .article-list article {
   border-radius: 12px;
   transition: box-shadow 0.2s ease;
@@ -37,7 +68,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* ========== 正文排版 ========== */
+/* 4. Article content */
 .article-content {
   font-size: 1.05rem;
   line-height: 1.85;
@@ -48,13 +79,13 @@
   margin-bottom: 1.2em;
 }
 
-/* ========== 文章标题 ========== */
+/* 5. Article titles */
 .article-title {
   font-size: 2rem;
   font-weight: 700;
 }
 
-/* ========== 标签 ========== */
+/* 6. Tags */
 .article-tags a,
 .tagCloud a {
   background: #f3f4f6;
@@ -74,9 +105,32 @@
   color: #1a73e8;
 }
 
-/* ========== Stack 右侧栏宽度 ========== */
+/* 7. Right sidebar width */
 @media (min-width: 768px) {
   .container.extended {
     --right-sidebar-max-width: 220px;
   }
+}
+
+/* 8. Post detail page: centered cover image, maximum height 300px */
+.article-page .article-header .article-image {
+  height: auto !important;
+  max-height: 300px !important;
+  overflow: hidden !important;
+}
+
+.article-page .article-header .article-image img {
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 300px !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+/* 9. Post detail page: larger body text */
+.article-page .article-content {
+  font-size: 18px;
+  line-height: 1.8;
 }
