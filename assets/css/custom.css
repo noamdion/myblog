@@ -1,7 +1,19 @@
 /* ========== 文章列表卡片封面图 ========== */
+/* 文章列表卡片封面图 */
+.article-list article .article-image {
+  height: auto !important;
+  aspect-ratio: auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
 .article-list article .article-image img {
-  height: auto;
-  object-fit: cover;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
 }
 
 /* ========== 右侧目录（TOC） ========== */
