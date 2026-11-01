@@ -12,7 +12,9 @@
   height: auto !important;
   max-height: none !important;
   margin: 0 !important;
-  overflow: hidden !important;
+  /* 关键：加上圆角和隐藏溢出 */
+  border-radius: 12px !important;
+  overflow: hidden !important; 
 }
 
 .article-list article .article-header .article-image a {
@@ -25,7 +27,9 @@
   width: 100% !important;
   height: auto !important;
   max-height: none !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
+  /* 关键：告诉浏览器图片的预设比例是 3:2，提前占位 */
+  aspect-ratio: 3 / 2 !important; 
 }
 
 .article-list article .article-header .article-details {
@@ -49,13 +53,22 @@
 
 /* 2. Table of contents */
 .widget--toc {
-  max-width: 240px;
+  max-width: 260px; /* 稍微放宽一点点侧边栏，容纳大字 */
   margin-left: auto;
 }
 
 #TableOfContents {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 1.2rem; /* 比 0.9 大，比 1.5 安全 */
+  line-height: 1.7;
+}
+
+/* 让目录的列表缩进更合理，不会显得头重脚轻 */
+#TableOfContents ul {
+  padding-left: 1.2rem;
+}
+
+#TableOfContents li {
+  margin-bottom: 0.5rem;
 }
 
 /* 3. Article cards */
@@ -85,7 +98,7 @@
   font-weight: 700;
 }
 
-/* 6. Tags */
+/* 6. Tags on articles and in sidebar */
 .article-tags a,
 .tagCloud a {
   background: #f3f4f6;
@@ -135,23 +148,44 @@
   line-height: 1.8;
 }
 
-
-/* Search results */
+/* 10. Search results */
 .search-result--list {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .search-result--list a {
-    background: transparent;
-    color: var(--body-text-color);
-    padding-block: 4px;
+  background: transparent;
+  color: var(--body-text-color);
+  padding-block: 4px;
 }
 
 /* Highlight matched keywords only */
 .search-result--list mark,
 .search-result--list .highlight {
-    background: #fff0b3;
-    color: #493800;
-    padding: 0 2px;
-    border-radius: 2px;
+  background: #fff0b3;
+  color: #493800;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+
+/* Tags page only */
+body:has(li.current a[href="/myblog/tags/"]) main .article-list--compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+body:has(li.current a[href="/myblog/tags/"]) main .article-list--compact article {
+  min-width: 0;
+  margin: 0;
+}
+
+body:has(li.current a[href="/myblog/tags/"]) main .article-list--compact .article-details {
+  padding: 12px 16px;
+}
+
+body:has(li.current a[href="/myblog/tags/"]) main .article-list--compact .article-title {
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
 }
