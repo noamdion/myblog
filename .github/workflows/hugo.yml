@@ -1,5 +1,9 @@
 name: Deploy Hugo site to Pages
 
+env:
+  HUGO_VERSION: '0.170.1'
+  DART_SASS_VERSION: '1.106.1'
+
 on:
   push:
     branches: ["main"]
@@ -27,8 +31,14 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
+
+      - name: Install Dart Sass
+        run: |
+          curl -sfL --output-dir "${{ runner.temp }}" -O "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          tar -C "${{ runner.temp }}" -xf "${{ runner.temp }}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
+          echo "${{ runner.temp }}/dart-sass" >> "$GITHUB_PATH"
 
       - name: Build
         run: hugo --minify
