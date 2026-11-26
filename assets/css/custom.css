@@ -1,7 +1,7 @@
 /* Homepage title banner */
 .home-intro {
   margin: 0 0 2rem;
-  padding: clamp(1.5rem, 5vw, 3rem);
+  padding: clamp(16px, 3vw, 28px) clamp(18px, 5vw, 40px);
   border-radius: 16px;
   background: linear-gradient(135deg, #eef5ff, #f7f4ff);
   text-align: center;
@@ -9,8 +9,8 @@
 
 .home-intro__eyebrow {
   margin: 0 0 0.75rem;
-  color: #52627a;
-  font-size: 0.9rem;
+  color: #394d69;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -28,8 +28,8 @@
 .home-intro__description {
   max-width: 650px;
   margin: 1rem auto 0;
-  color: #52627a;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #394d69;
+  font-size: 18px;
   line-height: 1.6;
 }
 
