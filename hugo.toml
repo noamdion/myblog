@@ -1,4 +1,4 @@
-﻿baseURL = "https://noamdion.github.io/myblog/"
+baseURL = "https://noamdion.github.io/myblog/"
 title = "Ping Lin"
 theme = "stack"
 
@@ -24,7 +24,7 @@ theme = "stack"
 
   [params.sidebar]
     compact = true
-    subtitle = "My life, thoughts, and English learning journey"
+    subtitle = "Student & lifelong learner"
     avatar = "img/avatar.jpg"
 
   [params.footer]
@@ -71,3 +71,4 @@ theme = "stack"
     [params.widgets.page.params]
       icon = "list"
       
+

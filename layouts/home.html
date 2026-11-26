@@ -1,0 +1,22 @@
+{{ define "main" }}
+    {{- $paginator := partial "helper/paginator.html" . -}}
+
+    <header class="home-intro">
+        <p class="home-intro__eyebrow">Welcome to my blog</p>
+        <h1 class="home-intro__title">A Student’s Journey Through Ideas, Books, and Life</h1>
+        <p class="home-intro__description">Reflections on reading, success, and the ideas that shape my life.</p>
+    </header>
+
+    <section class="article-list">
+        {{ range $index, $element := $paginator.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}

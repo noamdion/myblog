@@ -1,4 +1,52 @@
-﻿/* 1. Home: image on the left, text on the right */
+/* Homepage title banner */
+.home-intro {
+  margin: 0 0 2rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eef5ff, #f7f4ff);
+  text-align: center;
+}
+
+.home-intro__eyebrow {
+  margin: 0 0 0.75rem;
+  color: #52627a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-intro__title {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #172b4d;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.home-intro__description {
+  max-width: 650px;
+  margin: 1rem auto 0;
+  color: #52627a;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+
+html[data-scheme="dark"] .home-intro {
+  background: linear-gradient(135deg, #202d40, #302b40);
+}
+
+html[data-scheme="dark"] .home-intro__title {
+  color: #f2f5fa;
+}
+
+html[data-scheme="dark"] .home-intro__eyebrow,
+html[data-scheme="dark"] .home-intro__description {
+  color: #c1cad8;
+}
+
+/* 1. Home: image on the left, text on the right */
 .article-list article .article-header {
   display: flex !important;
   flex-direction: row !important;
@@ -189,3 +237,4 @@ body:has(li.current a[href="/myblog/tags/"]) main .article-list--compact .articl
   font-size: 1.5rem;
   overflow-wrap: anywhere;
 }
+
